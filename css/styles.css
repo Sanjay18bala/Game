@@ -41,8 +41,6 @@ h1 {
 .LHS h1 {
     color: #000000;
     transform: rotate(-45deg);
-    
-
 
 }
 
@@ -60,3 +58,24 @@ h1 {
     color: red;
 }
 
+
+
+
+@media only screen and (max-width: 768px) {
+    .Middle {
+        flex-direction: column;
+    }
+
+    #Bars {
+        text-align: center;
+    }
+
+    #info {
+        font-size: 2rem;
+        
+        
+    }
+
+
+    
+}
