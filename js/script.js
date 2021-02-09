@@ -83,9 +83,62 @@ document.addEventListener('keypress', function(event) {
         alert("Turn Caps Lock off");
     };
     
-    
 
 
 });
 
+function clicked(key) {
 
+    
+    for (x = 0; x < chosenWord.length; x++) {
+        var letter = chosenWord[x]
+        if (key == letter) {
+            display[x] = letter
+            document.getElementById("Bars").innerHTML = display;
+
+        };
+
+    };
+
+    if (display.includes("_")) {
+
+    } else {
+        document.getElementById("You-win").innerHTML = "You win.";
+        document.getElementById("h1").innerHTML = randomHappyReactions[Math.floor(Math.random() * 5)];
+        setTimeout(function() {
+            location.reload()
+        }, 500);
+
+    };
+    
+
+    if (wordInList.includes(key)) {        
+        
+    } else {
+
+
+        lifes -= 1
+
+        document.getElementById("info").innerHTML = "You have "+lifes+" guesses.";
+
+
+
+        if (lifes == 0) {
+            document.getElementById("You-lose").innerHTML = "You lose.";
+            document.getElementById("Bars").innerHTML = wordInList;
+            document.getElementById("h1").innerHTML = randomSadReactions[Math.floor(Math.random() * 7)];
+
+
+
+
+            setTimeout(function() {
+                location.reload();
+            }, 250)
+
+
+        };
+
+    };
+
+
+};
