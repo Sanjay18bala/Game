@@ -59,23 +59,67 @@ h1 {
 }
 
 
+.Buttons {
+
+    display: none;
+
+
+}
+
 
 
 @media only screen and (max-width: 768px) {
+    
+    h1 {
+        font-size: 1.5rem;
+    } 
+    
     .Middle {
         flex-direction: column;
+        margin-bottom: -10vh;
+    }
+
+    .LHS {
+        height:150px;
+        width: 150px;
     }
 
     #Bars {
         text-align: center;
+        font-size: 1.5rem;
     }
 
     #info {
-        font-size: 2rem;
+        /* display: none; */
+        font-size: 1.5rem
         
         
     }
 
+    #You-win {
+        text-align: center;
+        font-size: 1rem;
+    }
 
+    #You-lose {
+        text-align: center;
+        font-size: 1rem;
+
+    }
     
+
+    .Buttons {
+        display: flex;
+        justify-content: center;
+    }
+
+    button {
+        background-color: #FEFEFE;
+        box-shadow: 1px 1px 2.5px #c7ffd8;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 20px;
+        border-style: none;
+        margin: 2px;
+    }
 }
