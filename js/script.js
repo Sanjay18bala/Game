@@ -20,7 +20,7 @@ for (x = 0; x < chosenWord.length; x++) {
     display.push("_");
 };
 
-document.getElementById("Bars").innerHTML = display;
+document.getElementById("Bars").innerHTML = display.join("");
 
 document.getElementById("info").innerHTML = "You have "+lifes+" guesses.";
 
@@ -31,7 +31,7 @@ document.addEventListener('keypress', function(event) {
         var letter = chosenWord[x]
         if (event.key == letter) {
             display[x] = letter
-            document.getElementById("Bars").innerHTML = display;
+            document.getElementById("Bars").innerHTML = display.join("");
 
         };
 
@@ -62,7 +62,7 @@ document.addEventListener('keypress', function(event) {
 
         if (lifes == 0) {
             document.getElementById("You-lose").innerHTML = "You lose.";
-            document.getElementById("Bars").innerHTML = wordInList;
+            document.getElementById("Bars").innerHTML = wordInList.join("");
             document.getElementById("h1").innerHTML = randomSadReactions[Math.floor(Math.random() * 7)];
 
 
@@ -94,7 +94,7 @@ function clicked(key) {
         var letter = chosenWord[x]
         if (key == letter) {
             display[x] = letter
-            document.getElementById("Bars").innerHTML = display;
+            document.getElementById("Bars").innerHTML = display.join("");
 
         };
 
@@ -125,7 +125,7 @@ function clicked(key) {
 
         if (lifes == 0) {
             document.getElementById("You-lose").innerHTML = "You lose.";
-            document.getElementById("Bars").innerHTML = wordInList;
+            document.getElementById("Bars").innerHTML = wordInList.join("");
             document.getElementById("h1").innerHTML = randomSadReactions[Math.floor(Math.random() * 7)];
 
 
